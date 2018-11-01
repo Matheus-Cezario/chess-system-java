@@ -36,6 +36,9 @@ public class ChessMatch {
 		if(!board.thereIsAPiece(position)) {
 			throw new ChessExpection("There is no piece on source position");
 		}
+		if(!board.piece(position).IsThereAnyPossibleMove()) {
+			throw new ChessExpection("There is no possible moves for the chosen piece");
+		}
 	}
 	private Piece makeMove(Position source,Position target) {
 		Piece p = board.removePiece(source);
