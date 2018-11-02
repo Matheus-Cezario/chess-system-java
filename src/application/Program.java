@@ -38,6 +38,10 @@ public class Program {
 					if(capturedPiece != null) {
 						captured.add(capturedPiece);
 					}
+					if(mat.getPromoted() != null) {
+						System.out.print("Enter piece fot promotion (B/N/R/Q): ");
+						mat.replacePromotedPiece(sc.nextLine());
+					}
 				}
 			
 			catch(ChessExpection e) {
